@@ -1,0 +1,17 @@
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.csprojAssemblyReference.cache
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Frames\Settings.g.cs
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\MainWindow.g.cs
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\App.g.cs
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay_MarkupCompile.cache
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay_MarkupCompile.lref
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\bin\Debug\BillybobbeepOverlay.exe.config
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\bin\Debug\BillybobbeepOverlay.exe
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\bin\Debug\BillybobbeepOverlay.pdb
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Frames\Settings.baml
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\MainWindow.baml
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.g.resources
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.Properties.Resources.resources
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.csproj.GenerateResource.cache
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.csproj.CoreCompileInputs.cache
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.exe
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.pdb
