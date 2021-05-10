@@ -24,15 +24,17 @@ namespace BillybobbeepOverlay.Frames
         public Overlay()
         {
             InitializeComponent();
-        }
+			ReadConfig();
+
+		}
 
 		public void ReadConfig()
 		{
-			if (File.Exists("Settings.config"))
+			if (File.Exists("Settings.billy"))
 			{
 				string line;
 
-				TextReader sr = new StreamReader("Settings.config");
+				TextReader sr = new StreamReader("Settings.billy");
 				while((line = sr.ReadLine()) != null)
 				{
 					var seperatedData = line.Split(new[] { ";" }, StringSplitOptions.None);
@@ -40,15 +42,18 @@ namespace BillybobbeepOverlay.Frames
 					string description = seperatedData[1];
 					string image = seperatedData[2];
 
-					Title.Text = title;
-					Description.Text = description;
-					Logo.Source = new BitmapImage(new Uri(image));
+					try
+                    {
+						Title.Text = title;
+						Description.Text = description;
+						Logo.Source = new BitmapImage(new Uri(image));
+                    }
+                    catch
+                    {
+						return;
+                    }
                 }
 				sr.Close();
-			}
-			else
-			{
-				File.CreateText("Settings.config");
 			}
 		}
 	}
