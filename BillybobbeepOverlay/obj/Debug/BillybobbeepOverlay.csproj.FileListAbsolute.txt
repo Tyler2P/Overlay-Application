@@ -17,3 +17,5 @@ E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverla
 E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.pdb
 E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Frames\Overlay.g.cs
 E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Frames\Overlay.baml
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Settings\SettingsWindow.g.cs
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Settings\SettingsWindow.baml
