@@ -27,7 +27,7 @@ namespace BillybobbeepOverlay
 		public MainWindow()
 		{
 			InitializeComponent();
-			if (!File.Exists("Settings.config"))
+			if (!File.Exists("Settings.billy"))
 			{
 				PageFrame.Content = new Settings();
 			} 
