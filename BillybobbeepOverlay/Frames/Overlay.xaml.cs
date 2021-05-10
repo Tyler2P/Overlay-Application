@@ -25,7 +25,6 @@ namespace BillybobbeepOverlay.Frames
         {
             InitializeComponent();
 			ReadConfig();
-
 		}
 
 		public void ReadConfig()
@@ -42,6 +41,9 @@ namespace BillybobbeepOverlay.Frames
 					string description = seperatedData[1];
 					string image = seperatedData[2];
 
+					if (title == null || title == "" || title == " ") {
+						this.NavigationService.Navigate(new Settings());
+                    }
 					try
                     {
 						Title.Text = title;

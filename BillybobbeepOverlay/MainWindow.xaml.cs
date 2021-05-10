@@ -29,11 +29,11 @@ namespace BillybobbeepOverlay
 			InitializeComponent();
 			if (!File.Exists("Settings.billy"))
 			{
-				PageFrame.Content = new Settings();
+				PageFrame.Content = new Frames.Settings();
 			} 
 			else if (PageFrame.Content == null)
 			{
-				PageFrame.Content = new Overlay();
+				PageFrame.Content = new Frames.Overlay();
 			}
 		}
 
@@ -72,7 +72,7 @@ namespace BillybobbeepOverlay
         {
 			if (windowActive)
             {
-				PageFrame.NavigationService.Navigate(new Settings());
+				PageFrame.NavigationService.Navigate(new Frames.Settings());
 				SettingsBtn.Visibility = Visibility.Hidden;
 			}
         }

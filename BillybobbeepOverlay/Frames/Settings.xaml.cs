@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -100,8 +101,16 @@ namespace BillybobbeepOverlay.Frames
 		}
 		private async void SaveSettings(object sender, RoutedEventArgs e)
 		{
-			await WriteCache(TitleInput.Text, DescInput.Text, ImageName.Text);
-			this.NavigationService.Navigate(new Overlay());
+			try
+			{
+				await WriteCache(TitleInput.Text, DescInput.Text, ImageName.Text);
+				this.NavigationService.Navigate(new Overlay());
+			}
+			catch
+			{
+				Process.Start(Application.ResourceAssembly.Location);
+				Application.Current.Shutdown();
+			}
 		}
 		private void ShutdownApplication(object sender, RoutedEventArgs e)
 		{
