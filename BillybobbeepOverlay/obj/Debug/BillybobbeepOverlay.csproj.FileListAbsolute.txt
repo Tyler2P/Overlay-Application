@@ -15,3 +15,5 @@ E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverla
 E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.csproj.CoreCompileInputs.cache
 E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.exe
 E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\BillybobbeepOverlay.pdb
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Frames\Overlay.g.cs
+E:\Projects\BillybobbeepOverlay\BillybobbeepOverlay\obj\Debug\Frames\Overlay.baml
