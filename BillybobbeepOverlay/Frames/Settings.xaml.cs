@@ -27,11 +27,21 @@ namespace BillybobbeepOverlay.Frames
             InitializeComponent();
         }
 
-        public async Task WriteCache(string[] data)
+        public async Task WriteCache(string text, string description, string imagePath)
         {
-            TextWriter sw = new StreamWriter("Settings.config");
-            await sw.WriteLineAsync(string.Join(";", data));
-            sw.Close();
+            if (File.Exists("Settings.config"))
+            {
+                TextWriter sw = new StreamWriter("Settings.config");
+                await sw.WriteLineAsync(string.Join(";", text,description, imagePath));
+                sw.Close();
+            }
+            else
+            {
+                File.CreateText("Settings.config");
+                TextWriter sw = new StreamWriter("Settings.config");
+                await sw.WriteLineAsync(string.Join(";", text, description, imagePath));
+                sw.Close();
+            }
         }
         private void UploadImage(object sender, RoutedEventArgs e)
         {
@@ -42,13 +52,32 @@ namespace BillybobbeepOverlay.Frames
             {
                 string filename = fd.FileName;
                 ImageName.Text = filename;
-
-                //BitmapImage Image = new BitmapImage(new Uri(fd.FileName));
-                //var fileName = DateTime.Now.ToFileNameFormat() + Path.GetExtension(fd.FileName);
-                //var imagePath = Path.Combine("C:\" + fileNameToSave);
-
-                //File.Copy(fd.FileName, imagePath);
             }
+        }
+
+        private void TopMostEnabled(object sender, RoutedEventArgs e)
+        {
+            Window mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            mainWindow.Topmost = true;
+        }
+
+        private void TopMostDisabled(object sender, RoutedEventArgs e)
+        {
+            Window mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            mainWindow.Topmost = false;
+        }
+        private void ReturnToHomePage(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Overlay());
+        }
+        private async Task SaveSettings(object sender, RoutedEventArgs e)
+        {
+            await WriteCache(TitleInput.Text, DescInput.Text, ImageName.Text);
+            this.NavigationService.Navigate(new Overlay());
+        }
+        private void ShutdownApplication(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
