@@ -1,14 +1,22 @@
 ﻿<Window x:Class="BillybobbeepOverlay.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BillybobbeepOverlay"
-        mc:Ignorable="d"
-        WindowStyle="None"
-        ResizeMode="NoResize"
-        Background="Transparent"
-        Title="Billybobbeep Overlay" Height="220" Width="390"
-        MouseLeftButtonDown="Window_MouseDown">
-    <Frame x:Name="PageFrame" Background="Transparent"/>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:BillybobbeepOverlay"
+		mc:Ignorable="d"
+		WindowStyle="None"
+        AllowsTransparency="True"
+		ResizeMode="NoResize"
+		Topmost="True"
+        Icon="Logo.png"
+		Background="Transparent"
+		Title="Billybobbeep Overlay" Height="220" Width="390"
+		MouseLeftButtonDown="Window_MouseDown"
+		Activated="Window_Activated"
+		Deactivated="Window_Deactivated">
+    <Grid>
+        <Frame x:Name="PageFrame" Background="Transparent" NavigationUIVisibility="Hidden"/>
+        <Image x:Name="SettingsBtn" HorizontalAlignment="Left" Height="15" Margin="375,0,0,0" VerticalAlignment="Top" Width="15" MouseLeftButtonUp="Open_Settings" Source="Settings.png" MouseLeftButtonDown="Open_Settings" MouseRightButtonUp="Open_Settings" MouseRightButtonDown="Open_Settings"/>
+    </Grid>
 </Window>

@@ -23,12 +23,17 @@ namespace BillybobbeepOverlay
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		bool windowActive = true;
 		public MainWindow()
 		{
 			InitializeComponent();
-			if (PageFrame.Content == null)
+			if (!File.Exists("Settings.config"))
 			{
 				PageFrame.Content = new Settings();
+			} 
+			else if (PageFrame.Content == null)
+			{
+				PageFrame.Content = new Overlay();
 			}
 		}
 
@@ -37,10 +42,39 @@ namespace BillybobbeepOverlay
 			if (e.ChangedButton == MouseButton.Left)
 				this.DragMove();
 		}
+		private void Window_Activated(object sender, EventArgs e)
+        {
+			if (!windowActive)
+            {
+				windowActive = true;
+				SettingsBtn.Visibility = Visibility.Visible;
+			}
+		}
+		private void Window_Deactivated(object sender, EventArgs e)
+        {
+			if (windowActive)
+            {
+				windowActive = false;
+				SettingsBtn.Visibility = Visibility.Hidden;
+			}
+		}
+		public bool WindowIsActive()
+        {
+			return windowActive;
+        }
 		public bool ChangePage(object page)
 		{
 			PageFrame.Content = page;
 			return true;
 		}
-	}
+
+        private void Open_Settings(object sender, MouseButtonEventArgs e)
+        {
+			if (windowActive)
+            {
+				PageFrame.NavigationService.Navigate(new Settings());
+				SettingsBtn.Visibility = Visibility.Hidden;
+			}
+        }
+    }
 }
