@@ -30,8 +30,20 @@ namespace BillybobbeepOverlay.Frames
 		{
 			if (File.Exists("Settings.config"))
 			{
-				TextReader sr = new StreamReader("Settings.config");
+				string line;
 
+				TextReader sr = new StreamReader("Settings.config");
+				while((line = sr.ReadLine()) != null)
+				{
+					var seperatedData = line.Split(new[] { ";" }, StringSplitOptions.None);
+					string title = seperatedData[0];
+					string description = seperatedData[1];
+					string image = seperatedData[2];
+
+					Title.Text = title;
+					Description.Text = description;
+					Logo.Source = new BitmapImage(new Uri(image));
+                }
 				sr.Close();
 			}
 			else

@@ -6,8 +6,11 @@
       xmlns:local="clr-namespace:BillybobbeepOverlay.Frames"
       mc:Ignorable="d" 
       d:DesignHeight="220" d:DesignWidth="390"
-      Title="Overlay">
+      Title="Overlay"
+      Background="Transparent">
     <Grid>
-        
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="125,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="248" FontSize="25" Foreground="White" FontWeight="Bold" Text="Example Title"/>
+        <TextBlock x:Name="Description" HorizontalAlignment="Left" Margin="125,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="248" FontSize="15" Foreground="White" Text="Example Description"/>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="100" Margin="20,59,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Page>
